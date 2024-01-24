@@ -17,6 +17,15 @@
 
     console.log(goodQuotes1)
     console.log(goodQuotes2)
+
+    const bigFacts = 'You\'ve notice the prices of everything going up'
+
+    console.log(bigFacts);
+
+    const myString = '123';
+    const myNum = String(myString);
+
+    console.log(typeof myNum)
 </script>
 </head>
 
@@ -28,7 +37,7 @@
         const button = document.querySelector("button")
         
         function greet() {
-            const name = prompt("whats is your name?");
+            const name = prompt("What is your name?");
             const greeting = document.querySelector("#greeting");
             greeting.textContent = `Hello ${name}, nice to see you!`;
         }
