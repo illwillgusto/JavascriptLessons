@@ -4,9 +4,40 @@
 <meta charset="UTF-8">
 <title>Untitled Document</title>
 <link rel="stylesheet" href="assets/style.css">
-<script>console.log("Hello, World!")</script>
+<script>
+    const song = 'March Madness';
+    const score = 10;
+    const highestScore = 10;
+    const output = `I like the song ${song}. I gave it a a score of ${(score / highestScore) * 100}%`;
+
+    console.log(output);
+
+    const goodQuotes1 = 'We are making greeting buttons that say "Press Me!"';
+    const goodQuotes2 = `We know making a button say "Press Me!" will get their attention`
+
+    console.log(goodQuotes1)
+    console.log(goodQuotes2)
+</script>
 </head>
 
 <body>
+    <button>Press Me</button>
+    <div id="greeting"></div>
+
+    <script>
+        const button = document.querySelector("button")
+        
+        function greet() {
+            const name = prompt("whats is your name?");
+            const greeting = document.querySelector("#greeting");
+            greeting.textContent = `Hello ${name}, nice to see you!`;
+        }
+        
+        button.addEventListener("click", greet)
+        
+        
+        </script>
+
+
 </body>
 </html>
