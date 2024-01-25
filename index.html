@@ -1,52 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-<link rel="stylesheet" href="assets/style.css">
-<script>
-    const song = 'March Madness';
-    const score = 10;
-    const highestScore = 10;
-    const output = `I like the song ${song}. I gave it a a score of ${(score / highestScore) * 100}%`;
+  <head>
+    <meta charset="UTF-8" />
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script>
+      const song = "March Madness";
+      const score = 10;
+      const highestScore = 10;
+      const output = `I like the song ${song}. I gave it a a score of ${
+        (score / highestScore) * 100
+      }%`;
 
-    console.log(output);
+      console.log(output);
 
-    const goodQuotes1 = 'We are making greeting buttons that say "Press Me!"';
-    const goodQuotes2 = `We know making a button say "Press Me!" will get their attention`
+      const goodQuotes1 = 'We are making greeting buttons that say "Press Me!"';
+      const goodQuotes2 = `We know making a button say "Press Me!" will get their attention`;
 
-    console.log(goodQuotes1)
-    console.log(goodQuotes2)
+      console.log(goodQuotes1);
+      console.log(goodQuotes2);
 
-    const bigFacts = 'You\'ve notice the prices of everything going up'
+      const bigFacts = "You've notice the prices of everything going up";
 
-    console.log(bigFacts);
+      console.log(bigFacts);
 
-    const myString = '123';
-    const myNum = String(myString);
+      const myString = "123";
+      const myNum = String(myString);
 
-    console.log(typeof myNum)
-</script>
-</head>
+      console.log(typeof myNum);
+    </script>
+  </head>
 
-<body>
+  <body>
     <button>Press Me</button>
     <div id="greeting"></div>
 
+    <p>Display "Good Day!" if the hour is less than 18:00:</p>
+
+    <p id="demo"></p>
+
     <script>
-        const button = document.querySelector("button")
-        
-        function greet() {
-            const name = prompt("What is your name?");
-            const greeting = document.querySelector("#greeting");
-            greeting.textContent = `Hello ${name}, nice to see you!`;
-        }
-        
-        button.addEventListener("click", greet)
-        
-        
-        </script>
+      const button = document.querySelector("button");
 
+      function greet() {
+        const name = prompt("What is your name?");
+        const greeting = document.querySelector("#greeting");
+        greeting.textContent = `Hello ${name}, nice to see you!`;
+      }
 
-</body>
+      button.addEventListener("click", greet);
+
+      const time = new Date().getHours();
+      let greeting;
+
+      if (time < 10) {
+        greeting = "Good Morning!"
+      } else if (time < 18) {
+        greeting = "Good Day!"
+      } else {
+        greeting = "Good Evening!"
+      }
+
+      document.getElementById("demo").innerHTML = greeting;
+
+      
+    </script>
+  </body>
 </html>
