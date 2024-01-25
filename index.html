@@ -63,7 +63,26 @@
 
       document.getElementById("demo").innerHTML = greeting;
 
-      
+
+      let userName = prompt("Who\'s there?", '');
+
+      if (userName === 'Will') {
+
+        let pass = prompt('Password?', '');
+
+        if (pass === 'TheMaster' ) {
+            alert('Welcome Will!');
+        }   else if (pass === '' || pass === null) {
+            alert( 'Canceled' );
+        }    else {
+            alert( 'Wrong password');
+            }
+        }   else if (userName === '' || userName === null) {
+            alert( 'Canceled');
+        }   else {
+            alert( "I don't know you");
+        }
+
     </script>
   </body>
 </html>
